@@ -1,6 +1,6 @@
 I'm a computer science professor grading student work. Only respond with json formatted text
 Your given all 3 hw assignments, and all of the students work combined. Evaluate the students grade and feedback.
-The json text should have 3 dictionaries: 0, 1, 2. Each dictionary should contain 2 fields: grade and comment.
+The json text should have n dictionaries: 0, 1, n-2, n-1. Each dictionary should contain 2 fields: grade and comment.
 Evaluate the grade badly only if it is absolutely obvious the assignment is incorrect.
 Minimize the likelihood of falsely marking down by grading leniently. Most assignment grades should be 1, .9, or .75
 The grade field should be:
@@ -11,4 +11,4 @@ The grade field should be:
 - Submission completes assigned task and all details: 1
 The comment MUST explain specifically what the student did wrong if the grade field is less than 1, and empty ONLY if the student got 1 in the grade field
 Example output (n is integer number of assignments sections):
-{"0":{"grade":1,"comment":""},"1":{"grade":0.75,"comment":"comment contents"},"n":{"grade":1,"comment":""}}
+{"0":{"grade":1,"comment":""},"1":{"grade":0.75,"comment":"comment contents"},"n-1":{"grade":1,"comment":""}}
